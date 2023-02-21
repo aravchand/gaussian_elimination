@@ -17,7 +17,10 @@ for pivot_row in range(num_variables):
         if swap_with == -1:
             # if there are no rows with 0s in this variable, then that means that the pivot_row's equation is linearly-dependent (?)
             # or at least, this variable cannot be found.
-            raise ValueError(f"No solution exists. ")
+            raise ValueError(f"Either one equation is the same as another or No solution exists. ")
+            #====================    
+            # TODO: check for which it is and report more clearly.
+            #====================
         # perform the swap: we will swap the two rows directly (instead of element-by-element)
         temp = matrix[pivot_row]
         matrix[pivot_row] = matrix[row_below]
