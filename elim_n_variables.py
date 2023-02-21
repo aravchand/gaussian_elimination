@@ -16,7 +16,7 @@ for pivot_row in range(num_variables):
                 break
         if swap_with == -1:
             # if there are no rows with 0s in this variable, then that means that the pivot_row's equation is linearly-dependent (?)
-            # or at least, this variable cannot be found.
+            # that and/or this variable cannot be found.
             raise ValueError(f"Either one equation is the same as another or No solution exists. ")
             #====================    
             # TODO: check for which it is and report more clearly.
